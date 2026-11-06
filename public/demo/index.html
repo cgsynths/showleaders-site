@@ -33,7 +33,7 @@
   h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.2;color:var(--deep);margin:2.2rem 0 .6rem}
   .lead{max-width:46rem;color:var(--muted);font-size:1.05rem;margin:0 0 .5rem}
   .note{display:inline-block;margin:.4rem 0 1.6rem;background:var(--cream);border:1px solid #f0d9c2;color:#6b4a2a;border-radius:999px;padding:.3rem .9rem;font-size:.9rem}
-  .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));padding-bottom:3rem}
+  .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));padding-bottom:3rem}
   .card{background:#fff;border-radius:var(--radius);box-shadow:0 2px 14px rgba(11,58,82,.1);overflow:hidden;display:flex;flex-direction:column}
   .card .pic{background:#0a0910;display:flex;justify-content:center;max-height:280px;overflow:hidden}
   .card .pic img{display:block;width:auto;max-width:100%;height:280px;object-fit:cover;object-position:top}
@@ -80,6 +80,14 @@
         <h2>Judging</h2>
         <p>Ranks, notes and award assignment for judges on a tablet, with move-up prompts and a countdown timer.</p>
         <a class="btn" href="/demo/judging/">Open the judging demo</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="pic"><img src="/demo/assets/preview-liaison.jpg" width="390" height="725" alt="The liaison screen on a tablet or phone: a tank, its owner and fish, with Confirm buttons" loading="lazy"></div>
+      <div class="body">
+        <h2>Liaison screen</h2>
+        <p>For the people who check exhibitors in on show day: confirm tanks and fish, flag a fish that needs attention, fix a mistake, and find a tank on the floor map.</p>
+        <a class="btn" href="/demo/liaison/">Open the liaison demo</a>
       </div>
     </article>
   </div>
