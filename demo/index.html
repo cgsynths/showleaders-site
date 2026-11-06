@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Try ShowLeaders – interactive demos</title>
+<meta name="description" content="Try ShowLeaders for yourself: interactive demos of the visitor page, exhibitor registration and judging screens for koi shows. Sample data. Nothing is saved or sent.">
+<meta name="theme-color" content="#084868">
+<link rel="canonical" href="https://showleaders.com/demo/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ShowLeaders">
+<meta property="og:title" content="Try ShowLeaders – interactive demos">
+<meta property="og:description" content="Interactive demos for koi shows. Sample data, nothing saved or sent.">
+<meta property="og:url" content="https://showleaders.com/demo/">
+<meta property="og:image" content="https://showleaders.com/og-image.png">
+<link rel="preload" href="/fonts/Poppins-Regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/fonts/Poppins-Bold.woff" as="font" type="font/woff" crossorigin>
+<style>
+  @font-face{font-family:"Poppins";font-weight:400;font-style:normal;font-display:swap;src:url(/fonts/Poppins-Regular.woff) format("woff")}
+  @font-face{font-family:"Poppins";font-weight:500;font-style:normal;font-display:swap;src:url(/fonts/Poppins-Medium.woff) format("woff")}
+  @font-face{font-family:"Poppins";font-weight:700;font-style:normal;font-display:swap;src:url(/fonts/Poppins-Bold.woff) format("woff")}
+  :root{--deep:#0B3A52;--teal:#084868;--ripple:#6FA8BF;--mist:#EAF4F7;--orange:#F26B1D;--orange-dark:#C24E0A;--cream:#FFF4EA;--ink:#131A2B;--muted:#4A5568;--radius:16px}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:var(--mist);line-height:1.55}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  header{background:#fff;border-bottom:1px solid #d7e6ec}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+  header img{display:block;height:48px;width:auto}
+  header a.back{color:var(--teal);font-weight:500;text-decoration:none}
+  header a.back:hover{text-decoration:underline}
+  h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.2;color:var(--deep);margin:2.2rem 0 .6rem}
+  .lead{max-width:46rem;color:var(--muted);font-size:1.05rem;margin:0 0 .5rem}
+  .note{display:inline-block;margin:.4rem 0 1.6rem;background:var(--cream);border:1px solid #f0d9c2;color:#6b4a2a;border-radius:999px;padding:.3rem .9rem;font-size:.9rem}
+  .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));padding-bottom:3rem}
+  .card{background:#fff;border-radius:var(--radius);box-shadow:0 2px 14px rgba(11,58,82,.1);overflow:hidden;display:flex;flex-direction:column}
+  .card .pic{background:#0a0910;display:flex;justify-content:center;max-height:280px;overflow:hidden}
+  .card .pic img{display:block;width:auto;max-width:100%;height:280px;object-fit:cover;object-position:top}
+  .card .soon{height:280px;background:linear-gradient(135deg,#cfe3ea,#e6f0f4);display:flex;align-items:center;justify-content:center;color:var(--teal);font-weight:700;letter-spacing:.04em}
+  .card .body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card h2{margin:0;font-size:1.25rem;color:var(--deep)}
+  .card p{margin:0;color:var(--muted);font-size:.95rem}
+  .btn{margin-top:auto;display:inline-block;text-align:center;background:var(--orange);color:#fff;font-weight:700;text-decoration:none;border-radius:999px;padding:.7rem 1.3rem}
+  .btn:hover{background:var(--orange-dark)}
+  .btn.off{background:#c8d4da;color:#fff;pointer-events:none}
+  footer{padding:1.6rem 0 2.4rem;color:var(--muted);font-size:.9rem;text-align:center}
+  footer a{color:var(--teal)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="/" aria-label="ShowLeaders home"><img src="/showleaders-logo.png" width="327" height="96" alt="ShowLeaders – run your show beautifully"></a>
+  <a class="back" href="/">← showleaders.com</a>
+</div></header>
+<main class="wrap">
+  <h1>Try it yourself</h1>
+  <p class="lead">These are working demos of the tools ShowLeaders builds for koi shows. They use a made-up show and sample fish, so you can tap around freely.</p>
+  <span class="note">Nothing is saved or sent. No real sign-in, no emails.</span>
+  <div class="grid">
+    <article class="card">
+      <div class="pic"><img src="/demo/assets/preview-attendee.jpg" width="390" height="725" alt="The visitor page on a phone: schedule, show fish, People's Choice, vendors and more"></div>
+      <div class="body">
+        <h2>Visitor page</h2>
+        <p>What show visitors see on their phones: browse the fish, find a tank on the show floor map, vote for People's Choice, check the schedule, vendors and event map.</p>
+        <a class="btn" href="/demo/attendee/">Open the visitor demo</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="pic"><img src="/demo/assets/preview-registration.jpg" width="390" height="725" alt="Exhibitor registration on a phone: one fish at a time with a large picture" loading="lazy"></div>
+      <div class="body">
+        <h2>Exhibitor registration</h2>
+        <p>Reserve tanks on the floor plan, register fish with photos, and see credits at a glance. Try it as an exhibitor, a dealer or a vendor.</p>
+        <a class="btn" href="/demo/registration/">Open the registration demo</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="pic"><img src="/demo/assets/preview-judging.jpg" width="800" height="675" alt="Judging on a tablet: award assignment with eligible fish, ranks and a countdown timer" loading="lazy"></div>
+      <div class="body">
+        <h2>Judging</h2>
+        <p>Ranks, notes and award assignment for judges on a tablet, with move-up prompts and a countdown timer.</p>
+        <a class="btn" href="/demo/judging/">Open the judging demo</a>
+      </div>
+    </article>
+  </div>
+</main>
+<footer><div class="wrap">Want this for your show? <a href="mailto:Info@showleaders.com?subject=ShowLeaders%20demo">Email us</a> · © Chris Goumas</div></footer>
+</body>
+</html>

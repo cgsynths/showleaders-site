@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visitor page demo – ShowLeaders</title>
+<meta name="description" content="Try the ShowLeaders visitor page: browse the fish, find a tank on the show floor map, vote for People's Choice, see the schedule and vendors. A demo with sample data. Nothing is saved or sent.">
+<meta name="theme-color" content="#084868">
+<link rel="canonical" href="https://showleaders.com/demo/attendee/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ShowLeaders">
+<meta property="og:title" content="Visitor page demo – ShowLeaders">
+<meta property="og:description" content="Try the visitor page for koi shows. Sample data, nothing saved or sent.">
+<meta property="og:url" content="https://showleaders.com/demo/attendee/">
+<meta property="og:image" content="https://showleaders.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css?v=1">
+<style>
+  .demo-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .35rem .9rem; padding: .55rem .9rem; background: #084868; color: #fff; font: 600 .85rem/1.35 Manrope, system-ui, sans-serif; text-align: center; }
+  .demo-bar a { color: #ffd2b0; font-weight: 700; }
+  .demo-bar button { font: inherit; font-weight: 700; color: #084868; background: #fff; border: 0; border-radius: 999px; padding: .3rem .8rem; cursor: pointer; }
+  .demo-tag { background: #F26B1D; color: #fff; border-radius: 999px; padding: .1rem .6rem; font-weight: 800; letter-spacing: .04em; }
+  .demo-hint { margin: 0; padding: .45rem 1rem; text-align: center; font: 500 .8rem/1.35 Manrope, system-ui, sans-serif; color: #555; background: #fff7ee; border-bottom: 1px solid #f0d9c2; }
+</style>
+</head>
+<body>
+<div class="demo-bar" role="note">
+  <span><span class="demo-tag">DEMO</span> Nothing is saved or sent.</span>
+  <button type="button" id="demo-reset">Reset demo</button>
+  <a href="mailto:Info@showleaders.com?subject=ShowLeaders%20visitor%20page">Email us</a>
+  <a href="/demo/">More demos</a>
+</div>
+<p class="demo-hint" id="demo-hint">Sign up with any made-up name and email, such as “Pat Smith, pat@example.com”. Nothing leaves your device.</p>
+<div id="root"></div>
+<noscript><p style="padding:1rem">This demo needs JavaScript turned on.</p></noscript>
+<script>
+  window.__CFG__ = { params: { showId: "8" }, pathname: "/demo/attendee/" };
+  // the sign-up hint is only useful until the visitor has signed up
+  (function () {
+    var hint = document.getElementById("demo-hint");
+    function check() { var t = ""; try { t = localStorage.getItem("koi-attendee-token") || ""; } catch (e) {} hint.style.display = t ? "none" : ""; }
+    check(); setInterval(check, 400);
+  })();
+  document.getElementById("demo-reset").addEventListener("click", function () {
+    try { localStorage.removeItem("koi-demo-attendee"); localStorage.removeItem("koi-attendee-token"); } catch (e) {}
+    location.hash = ""; location.reload();
+  });
+</script>
+<script src="app.js?v=1"></script>
+</body>
+</html>
