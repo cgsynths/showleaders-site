@@ -202,6 +202,8 @@ h3 { font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color:
 /* "+" button beside Country / Breeder / Dealer and its small pop-up */
 .pick-add { display: flex; gap: .25rem; align-items: center; }
 .pick-add select { width: auto; flex: 1 1 auto; min-width: 4.4rem; max-width: 5.4rem; }
+.pick-add.wide { display: flex; }
+.pick-add.wide select { max-width: none; flex: 1 1 auto; }
 .btn.add-new { padding: .2rem .42rem; font-size: 1rem; line-height: 1; flex: none; }
 .modal.small-modal { max-width: 460px; margin-top: 12vh; }
 .small-modal h2 { margin-top: 0; }
