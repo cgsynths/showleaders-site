@@ -25,4 +25,18 @@
     }, { rootMargin: '-45% 0px -50% 0px' });
     Object.keys(links).forEach(function (k) { var s = document.getElementById(k); if (s) io.observe(s); });
   }
+  // How-to videos: show a thumbnail, load the YouTube player only when clicked
+  document.querySelectorAll('a.thumb[data-yt]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+      e.preventDefault();
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + a.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      f.title = a.getAttribute('data-title') || 'Video';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      f.setAttribute('loading', 'lazy');
+      a.parentNode.replaceChild(f, a);
+    });
+  });
 })();
